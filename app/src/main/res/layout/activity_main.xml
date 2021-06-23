@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/timer_layout"
+        android:layout_marginTop="100dp">
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/counter_anim"
+            app:lottie_rawRes="@raw/loading2"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+       <RelativeLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerInParent="true">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/timer_text"
+               tools:text="0"
+               android:textSize="50dp"
+               android:textColor="@color/colorAccent"
+               android:layout_centerHorizontal="true"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/count_text"
+               android:layout_below="@id/timer_text"
+               tools:text="0"
+               android:textSize="50dp"
+               android:textColor="@color/colorAccent"
+               android:layout_centerHorizontal="true"
+               android:layout_marginTop="20dp"/>
+
+       </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:layout_margin="@android:dimen/app_icon_size"
+        android:id="@+id/button_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/play_layout"
+            android:background="@drawable/button_bg_active"
+            android:layout_margin="5dp"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/play"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="Start"
+                android:textAlignment="center"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:textSize="30dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pause_layout"
+            android:background="@drawable/button_bg_active"
+            android:layout_margin="5dp"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/pause"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="Pause"
+                android:textAlignment="center"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:textSize="30dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/reset_layout"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_bg_inactive"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reset"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="Reset"
+                android:textAlignment="center"
+                android:padding="15dp"
+                android:textColor="@color/button_active"
+                android:textSize="20dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/settings_selector_button_container"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/settings_selector_button"
+            android:background="@drawable/ic_settings_black_24dp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
